@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll Online | Sankalp Digital Pathshala</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .step-indicator {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+    .step-indicator::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--border);
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+    .step-indicator .step {
+      background: var(--white);
+      border: 2px solid var(--border);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      position: relative;
+      z-index: 2;
+      transition: var(--transition);
+    }
+    .step-indicator .step.active {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: var(--white);
+    }
+    .enroll-step-panel {
+      display: none;
+    }
+  </style>
+</head>
+<body style="padding-top: 4.5rem;">
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Sankalp<span>Pathshala</span></a>
+      <button class="hamburger" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="study-material.html" class="nav-link">Study Material</a></li>
+        <li><a href="test-series.html" class="nav-link">Test Series</a></li>
+        <li><a href="ai-learning.html" class="nav-link">AI Learning</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li><a href="faq.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="enroll.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Enroll Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section style="background:var(--navy); color:#fff; text-align:center; padding: 4rem 0;">
+      <div class="container">
+        <h1 style="color:#fff; margin-bottom:1rem;">Online Admission Registration</h1>
+        <p style="color:var(--slate); max-width:600px; margin:0 auto; font-size:1.1rem;">Begin your academic journey by filling out our secure class enrollment registration forms.</p>
+      </div>
+    </section>
+
+    <!-- Forms workspace -->
+    <section>
+      <div class="container" style="max-width:700px;">
+        <div class="card">
+          
+          <!-- Step indicators -->
+          <div class="step-indicator">
+            <div class="step active" id="indicator-step-1">1</div>
+            <div class="step" id="indicator-step-2">2</div>
+            <div class="step" id="indicator-step-3">3</div>
+          </div>
+
+          <form id="enroll-form">
+            
+            <!-- Step 1: Course selection -->
+            <div class="enroll-step-panel" style="display:block;">
+              <h3 style="margin-bottom:1.5rem;">Step 1: Choose Your Course</h3>
+              <div class="form-group">
+                <label class="form-label" for="student-course">Select Classroom Program *</label>
+                <select class="form-control" id="student-course" required>
+                  <option value="">Select Program</option>
+                  <option value="Foundation">Foundation (Classes 6th - 8th)</option>
+                  <option value="Academics">Academic boards (Classes 9th - 10th)</option>
+                  <option value="Senior">Senior Secondary boards (Classes 11th - 12th)</option>
+                  <option value="JEE">IIT-JEE Competitive Preparations</option>
+                  <option value="NEET">NEET-UG Medical Science Prep</option>
+                  <option value="FutureSkills">Coding & AI Fundamentals Weekend Program</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="student-class">Current Class of Student *</label>
+                <input type="text" class="form-control" id="student-class" placeholder="e.g. Class 10th" required>
+              </div>
+            </div>
+
+            <!-- Step 2: Details details -->
+            <div class="enroll-step-panel">
+              <h3 style="margin-bottom:1.5rem;">Step 2: Student Details</h3>
+              <div class="form-group">
+                <label class="form-label" for="student-name">Full Name of Student *</label>
+                <input type="text" class="form-control" id="student-name" placeholder="Rohan Sharma" required>
+              </div>
+              <div class="grid-2" style="gap:1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="student-mobile">Mobile Number *</label>
+                  <input type="tel" class="form-control" id="student-mobile" placeholder="9876543210" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="student-email">Email Address *</label>
+                  <input type="email" class="form-control" id="student-email" placeholder="rohan@example.com" required>
+                </div>
+              </div>
+              <div class="grid-2" style="gap:1rem;">
+                <div class="form-group">
+                  <label class="form-label" for="parent-name">Parent / Guardian Name *</label>
+                  <input type="text" class="form-control" id="parent-name" placeholder="Suresh Sharma" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="student-city">City *</label>
+                  <input type="text" class="form-control" id="student-city" placeholder="New Delhi" required>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Confirmation -->
+            <div class="enroll-step-panel">
+              <h3 style="margin-bottom:1.5rem;">Step 3: Confirm Details</h3>
+              <div class="form-group">
+                <label class="form-label" for="student-msg">Additional notes (e.g. scholarship details or previous grades):</label>
+                <textarea class="form-control" id="student-msg" placeholder="e.g. Secured 92% in class 9th boards, looking for test waiver options."></textarea>
+              </div>
+              <div class="form-group" style="display:flex; gap:0.5rem; align-items:flex-start;">
+                <input type="checkbox" id="terms-check" style="margin-top:0.3rem;" required>
+                <label for="terms-check" style="font-size:0.85rem; color:var(--slate);">I verify that the above information is correct and I agree to the <a href="terms.html" style="color:var(--primary); font-weight:600;">Terms</a> and <a href="privacy.html" style="color:var(--primary); font-weight:600;">Privacy Policies</a> of Sankalp Digital Pathshala.</label>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div style="display:flex; justify-content:space-between; margin-top:2.5rem; border-top:1px solid var(--border); padding-top:1.5rem;">
+              <button type="button" class="btn btn-outline" id="prev-step" style="visibility:hidden;">Back Step</button>
+              <button type="button" class="btn btn-primary" id="next-step">Next Step</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="font-size:1.3rem;">Sankalp Pathshala</h4>
+        <p>Premium offline academy offering structured competitive exams and boards preparation with AI learning integration.</p>
+        <p style="font-size:0.8rem; color:var(--slate);">Designed & developed by NexGenAiTech (Jahid, +91 8055698328, https://nexgenaitech.online)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="courses.html">Classroom Courses</a></li>
+          <li><a href="study-material.html">Study Material</a></li>
+          <li><a href="test-series.html">Mock Test Series</a></li>
+          <li><a href="ai-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Institute</a></li>
+          <li><a href="faculty.html">Our Faculty</a></li>
+          <li><a href="gallery.html">Campus Gallery</a></li>
+          <li><a href="faq.html">FAQ Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+  <script>
+    // Capture URL parameter for course pre-select
+    const courseUrlParam = new URLSearchParams(window.location.search).get('course');
+    if (courseUrlParam) {
+      const selectBox = document.getElementById('student-course');
+      if (selectBox) {
+        for (let i = 0; i < selectBox.options.length; i++) {
+          if (selectBox.options[i].value.toLowerCase().includes(courseUrlParam.toLowerCase())) {
+            selectBox.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

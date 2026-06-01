@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Sankalp Digital Pathshala</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body style="padding-top: 4.5rem;">
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Sankalp<span>Pathshala</span></a>
+      <button class="hamburger" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="study-material.html" class="nav-link">Study Material</a></li>
+        <li><a href="test-series.html" class="nav-link">Test Series</a></li>
+        <li><a href="ai-learning.html" class="nav-link">AI Learning</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li><a href="faq.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="enroll.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Enroll Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section style="background:var(--navy); color:#fff; text-align:center; padding: 4rem 0;">
+      <div class="container">
+        <h1 style="color:#fff; margin-bottom:1rem;">Contact Our Team</h1>
+        <p style="color:var(--slate); max-width:600px; margin:0 auto; font-size:1.1rem;">Reach out to our admissions desk or connect with our administrative coordinators.</p>
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <section>
+      <div class="container grid-3">
+        
+        <!-- Form card -->
+        <div class="card" style="grid-column: span 2;">
+          <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
+          <form id="contact-form">
+            <div class="grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Full Name *</label>
+                <input type="text" class="form-control" id="contact-name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address *</label>
+                <input type="email" class="form-control" id="contact-email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="grid-2" style="gap:1rem;">
+              <div class="form-group">
+                <label class="form-label" for="contact-mobile">Mobile Number *</label>
+                <input type="tel" class="form-control" id="contact-mobile" placeholder="+91 9876543210" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Inquiry Subject *</label>
+                <select class="form-control" id="contact-subject" required>
+                  <option value="">Select Topic</option>
+                  <option value="Admissions">Admissions Inquiry</option>
+                  <option value="Courses">Course Detail Request</option>
+                  <option value="Faculty">Faculty Career Application</option>
+                  <option value="Events">Event Registration</option>
+                  <option value="Support">Other Support</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Your Message *</label>
+              <textarea class="form-control" id="contact-message" placeholder="Type your query here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Details card & Helper stacked -->
+        <div style="display:flex; flex-direction:column; gap:2rem;">
+          
+          <div class="card">
+            <h3>Reach Out Directly</h3>
+            <p style="margin: 1rem 0;">Feel free to drop by our physical campus during working hours.</p>
+            <p style="margin-bottom:0.75rem; color:#000;"><strong>📍 Address:</strong> 123 Education Hub, Sector 4, New Delhi, India</p>
+            <p style="margin-bottom:0.75rem; color:#000;"><strong>📞 Phone:</strong> +91 98765 43210</p>
+            <p style="margin-bottom:0.75rem; color:#000;"><strong>📧 Email:</strong> admissions@sankalp.edu</p>
+            <p style="color:#000;"><strong>⏰ Hours:</strong> Mon - Sat: 9:00 AM - 7:00 PM</p>
+          </div>
+
+          <div class="card" style="border-top: 4px solid var(--primary);">
+            <h3>Need Quick Help?</h3>
+            <p style="margin:1rem 0;">Get your curriculum questions answered instantly by our digital teaching assistant.</p>
+            <a href="sankalp-sathi.html" class="btn btn-outline" style="width:100%;">Chat with AI Assistant</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Map embed -->
+    <section style="padding:0;">
+      <div style="width:100%; height:400px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9904257143924!2d77.11475727632664!3d28.6300451756641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03b0d2d3cb5d%3A0x6b14f8ef0e5a953e!2sSector%204%2C%20Dwarka%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1717200000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="font-size:1.3rem;">Sankalp Pathshala</h4>
+        <p>Premium offline academy offering structured competitive exams and boards preparation with AI learning integration.</p>
+        <p style="font-size:0.8rem; color:var(--slate);">Designed & developed by NexGenAiTech (Jahid, +91 8055698328, https://nexgenaitech.online)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="courses.html">Classroom Courses</a></li>
+          <li><a href="study-material.html">Study Material</a></li>
+          <li><a href="test-series.html">Mock Test Series</a></li>
+          <li><a href="ai-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Institute</a></li>
+          <li><a href="faculty.html">Our Faculty</a></li>
+          <li><a href="gallery.html">Campus Gallery</a></li>
+          <li><a href="faq.html">FAQ Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+  <script>
+    // Automatically pre-fill subject parameter if passed in URL query
+    const params = new URLSearchParams(window.location.search);
+    const sub = params.get('subject');
+    if (sub) {
+      const selectObj = document.getElementById('contact-subject');
+      if (selectObj) {
+        // Find match
+        for (let i = 0; i < selectObj.options.length; i++) {
+          if (selectObj.options[i].value.toLowerCase().includes(sub.toLowerCase())) {
+            selectObj.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>

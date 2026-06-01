@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with Sankalp Sathi | AI Assistant</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body style="padding-top: 4.5rem;">
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Sankalp<span>Pathshala</span></a>
+      <button class="hamburger" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="study-material.html" class="nav-link">Study Material</a></li>
+        <li><a href="test-series.html" class="nav-link">Test Series</a></li>
+        <li><a href="ai-learning.html" class="nav-link">AI Learning</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li><a href="faq.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="enroll.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Enroll Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section style="background:var(--navy); color:#fff; text-align:center; padding: 4rem 0;">
+      <div class="container">
+        <h1 style="color:#fff; margin-bottom:1rem;">Meet Sankalp Sathi</h1>
+        <p style="color:var(--slate); max-width:600px; margin:0 auto; font-size:1.1rem;">Your AI education consultant. Ask about courses, mock schedules, or seek learning orientation guidance.</p>
+      </div>
+    </section>
+
+    <!-- Chat workspace split -->
+    <section>
+      <div class="container grid-3">
+        
+        <!-- Left: Chat UI -->
+        <div style="grid-column: span 2;">
+          <div class="chat-window">
+            <div class="chat-header">
+              <h3>🤖 Sankalp Sathi Assistant</h3>
+              <div class="status-dot"></div>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+              <div class="message-bubble message-bot">
+                Hello! I am Sankalp Sathi, your learning advisor. How can I help you today? Ask me about our classroom programs, test timetables, study notes, or career options!
+              </div>
+            </div>
+            
+            <!-- Quick Chips -->
+            <div class="chat-chips">
+              <button class="chip">What courses do you offer?</button>
+              <button class="chip">Tell me about Rojgaar Buddy</button>
+              <button class="chip">How can I enroll?</button>
+            </div>
+            
+            <!-- Input Form -->
+            <div class="chat-footer">
+              <input type="text" class="chat-input" id="chat-input" placeholder="Type your inquiry message here...">
+              <button class="btn btn-primary" id="chat-send-btn">Send</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Lead Capture card -->
+        <div>
+          <div class="card" style="border-top: 4px solid var(--primary);">
+            <h3 style="margin-bottom:1rem;">Request Counselor Call</h3>
+            <p style="font-size:0.9rem; margin-bottom:1.5rem;">Fill out your details to get an expert human phone consultation and score your admissions profile.</p>
+            <form id="chat-lead-form">
+              <div class="form-group">
+                <label class="form-label" for="lead-name">Student Name *</label>
+                <input type="text" class="form-control" id="lead-name" placeholder="Raj Sharma" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lead-class">Target Class *</label>
+                <select class="form-control" id="lead-class" required>
+                  <option value="">Choose Class</option>
+                  <option value="6-8">Foundation (6th-8th)</option>
+                  <option value="9-10">Board Prep (9th-10th)</option>
+                  <option value="11-12">Senior Science (11th-12th)</option>
+                  <option value="JEE">Engineering (JEE Main/Adv)</option>
+                  <option value="NEET">Medical (NEET-UG)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lead-interest">What interests you most? *</label>
+                <input type="text" class="form-control" id="lead-interest" placeholder="e.g. Weak at Math, want to clear JEE" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lead-phone">Mobile Number *</label>
+                <input type="tel" class="form-control" id="lead-phone" placeholder="9876543210" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lead-city">City *</label>
+                <input type="text" class="form-control" id="lead-city" placeholder="New Delhi" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lead-parent">Parent Name (Optional)</label>
+                <input type="text" class="form-control" id="lead-parent" placeholder="Ramesh Sharma">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lead-email">Email ID (Optional)</label>
+                <input type="email" class="form-control" id="lead-email" placeholder="raj@example.com">
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Submit Details</button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="font-size:1.3rem;">Sankalp Pathshala</h4>
+        <p>Premium offline academy offering structured competitive exams and boards preparation with AI learning integration.</p>
+        <p style="font-size:0.8rem; color:var(--slate);">Designed & developed by NexGenAiTech (Jahid, +91 8055698328, https://nexgenaitech.online)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="courses.html">Classroom Courses</a></li>
+          <li><a href="study-material.html">Study Material</a></li>
+          <li><a href="test-series.html">Mock Test Series</a></li>
+          <li><a href="ai-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Institute</a></li>
+          <li><a href="faculty.html">Our Faculty</a></li>
+          <li><a href="gallery.html">Campus Gallery</a></li>
+          <li><a href="faq.html">FAQ Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

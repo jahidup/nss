@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Gallery | Sankalp Digital Pathshala</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body style="padding-top: 4.5rem;">
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Sankalp<span>Pathshala</span></a>
+      <button class="hamburger" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="study-material.html" class="nav-link">Study Material</a></li>
+        <li><a href="test-series.html" class="nav-link">Test Series</a></li>
+        <li><a href="ai-learning.html" class="nav-link">AI Learning</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li><a href="faq.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="enroll.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Enroll Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section style="background:var(--navy); color:#fff; text-align:center; padding: 4rem 0;">
+      <div class="container">
+        <h1 style="color:#fff; margin-bottom:1rem;">Campus Gallery</h1>
+        <p style="color:var(--slate); max-width:600px; margin:0 auto; font-size:1.1rem;">Take a virtual tour of our premium infrastructure, robotic workshops, and classrooms.</p>
+      </div>
+    </section>
+
+    <!-- Search / Filter -->
+    <section style="padding: 2rem 0;">
+      <div class="container" style="max-width:500px;">
+        <input type="text" class="form-control" id="gallery-search" placeholder="🔍 Search gallery photos by caption...">
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section style="padding-top:1rem;">
+      <div class="container">
+        <div class="gallery-grid" id="public-gallery-grid">
+          <!-- Item 1 -->
+          <div class="gallery-item" data-caption="Smart Classrooms with Interactive Whiteboards">
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=600&auto=format&fit=crop" alt="Smart Classrooms">
+            <div class="gallery-overlay">
+              <p>Smart Classrooms with Interactive Whiteboards</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="gallery-item" data-caption="Advanced Robotics & AI Laboratory">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=600&auto=format&fit=crop" alt="Robotics Lab">
+            <div class="gallery-overlay">
+              <p>Advanced Robotics & AI Laboratory</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="gallery-item" data-caption="Chemistry and Physics Experiment Center">
+            <img src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?q=80&w=600&auto=format&fit=crop" alt="Science Lab">
+            <div class="gallery-overlay">
+              <p>Chemistry and Physics Experiment Center</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="gallery-item" data-caption="Group Discussion and Counseling Halls">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop" alt="Counseling Hall">
+            <div class="gallery-overlay">
+              <p>Group Discussion and Counseling Halls</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="gallery-item" data-caption="Sankalp Annual Sports Championship Prize Ceremony">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=600&auto=format&fit=crop" alt="Annual Day">
+            <div class="gallery-overlay">
+              <p>Sankalp Annual Sports Championship Prize Ceremony</p>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="gallery-item" data-caption="Computer Science Lab & Software Training Hub">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=600&auto=format&fit=crop" alt="Computer Lab">
+            <div class="gallery-overlay">
+              <p>Computer Science Lab & Software Training Hub</p>
+            </div>
+          </div>
+          <!-- Item 7 -->
+          <div class="gallery-item" data-caption="Vast Study Library with 5,000+ Book Volumes">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=600&auto=format&fit=crop" alt="Library Room">
+            <div class="gallery-overlay">
+              <p>Vast Study Library with 5,000+ Book Volumes</p>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="gallery-item" data-caption="Creative Arts & Self Expression Center">
+            <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?q=80&w=600&auto=format&fit=crop" alt="Arts Center">
+            <div class="gallery-overlay">
+              <p>Creative Arts & Self Expression Center</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-btn lightbox-close" id="lb-close">&times;</button>
+      <button class="lightbox-btn lightbox-prev" id="lb-prev">&#10094;</button>
+      <div class="lightbox-content">
+        <img id="lightbox-img" src="" alt="Lightbox View">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+      <button class="lightbox-btn lightbox-next" id="lb-next">&#10095;</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="font-size:1.3rem;">Sankalp Pathshala</h4>
+        <p>Premium offline academy offering structured competitive exams and boards preparation with AI learning integration.</p>
+        <p style="font-size:0.8rem; color:var(--slate);">Designed & developed by NexGenAiTech (Jahid, +91 8055698328, https://nexgenaitech.online)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="courses.html">Classroom Courses</a></li>
+          <li><a href="study-material.html">Study Material</a></li>
+          <li><a href="test-series.html">Mock Test Series</a></li>
+          <li><a href="ai-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Institute</a></li>
+          <li><a href="faculty.html">Our Faculty</a></li>
+          <li><a href="gallery.html">Campus Gallery</a></li>
+          <li><a href="faq.html">FAQ Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+  <script>
+    // Proactively fetch uploaded gallery pictures
+    async function loadExtraGallery() {
+      try {
+        const res = await fetch('/api/public/gallery');
+        if (res.ok) {
+          const list = await res.json();
+          const grid = document.getElementById('public-gallery-grid');
+          list.forEach(item => {
+            // Check duplicates
+            if (grid.querySelector(`img[src="${item.imageUrl}"]`)) return;
+
+            const div = document.createElement('div');
+            div.className = 'gallery-item';
+            div.setAttribute('data-caption', item.caption);
+            div.innerHTML = `
+              <img src="${item.imageUrl}" alt="${item.caption}">
+              <div class="gallery-overlay">
+                <p>${item.caption}</p>
+              </div>
+            `;
+            grid.appendChild(div);
+          });
+          // Re-init gallery behaviors to attach event listeners to new items
+          initGalleryPage();
+        }
+      } catch (e) {
+        console.error("Gallery sync fail", e);
+      }
+    }
+    loadExtraGallery();
+  </script>
+</body>
+</html>

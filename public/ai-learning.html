@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Learning Portal | Sankalp Digital Pathshala</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body style="padding-top: 4.5rem;">
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Sankalp<span>Pathshala</span></a>
+      <button class="hamburger" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="courses.html" class="nav-link">Courses</a></li>
+        <li><a href="study-material.html" class="nav-link">Study Material</a></li>
+        <li><a href="test-series.html" class="nav-link">Test Series</a></li>
+        <li><a href="ai-learning.html" class="nav-link">AI Learning</a></li>
+        <li><a href="results.html" class="nav-link">Results</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="events.html" class="nav-link">Events</a></li>
+        <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+        <li><a href="faq.html" class="nav-link">FAQs</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="enroll.html" class="btn btn-primary" style="padding: 0.5rem 1rem;">Enroll Now</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section style="background:var(--navy); color:#fff; text-align:center; padding: 4rem 0;">
+      <div class="container">
+        <h1 style="color:#fff; margin-bottom:1rem;">Sankalp AI Doubt Solver</h1>
+        <p style="color:var(--slate); max-width:600px; margin:0 auto; font-size:1.1rem;">Submit any question as Text, an Image snapshot, or a PDF document to receive instant step-by-step solutions.</p>
+      </div>
+    </section>
+
+    <!-- AI Solver Workspace -->
+    <section>
+      <div class="container" style="max-width:900px;">
+        <div class="tab-container">
+          <div class="tab-headers">
+            <button class="tab-btn active" data-tab="tab-text" id="tab-btn-text">Text Input</button>
+            <button class="tab-btn" data-tab="tab-image" id="tab-btn-img">Upload Image</button>
+            <button class="tab-btn" data-tab="tab-pdf" id="tab-btn-pdf">Upload PDF</button>
+          </div>
+          <div class="tab-panels">
+            
+            <!-- Text Solver Panel -->
+            <div class="tab-panel active" id="tab-text">
+              <form id="solve-text-form">
+                <div class="form-group">
+                  <label class="form-label" for="question-text">Type your question or equation:</label>
+                  <textarea class="form-control" id="question-text" placeholder="e.g. Find the roots of the equation x^2 - 5x + 6 = 0 or Balance the chemical equation: Fe + O2 -> Fe2O3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Resolve Question</button>
+              </form>
+            </div>
+
+            <!-- Image Solver Panel -->
+            <div class="tab-panel" id="tab-image">
+              <form id="solve-image-form">
+                <div class="form-group">
+                  <label class="form-label">Drop your question snapshot here or click to browse:</label>
+                  <div class="file-dropzone" id="dropzone-image">
+                    <p style="font-weight:600; color:var(--slate);">Drag & Drop your Question Image (JPG, PNG)</p>
+                    <p style="font-size:0.85rem; color:var(--slate); margin-top:0.5rem;">Maximum file size: 10MB</p>
+                    <input type="file" id="file-image" accept="image/*" style="display:none;">
+                  </div>
+                  <div class="file-preview" id="preview-image"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="question-image-txt">Additional instructions (Optional):</label>
+                  <input type="text" class="form-control" id="question-image-txt" placeholder="Explain the key theory behind this question.">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Resolve Question</button>
+              </form>
+            </div>
+
+            <!-- PDF Solver Panel -->
+            <div class="tab-panel" id="tab-pdf">
+              <form id="solve-pdf-form">
+                <div class="form-group">
+                  <label class="form-label">Drop your assignment PDF document here or click to browse:</label>
+                  <div class="file-dropzone" id="dropzone-pdf">
+                    <p style="font-weight:600; color:var(--slate);">Drag & Drop your Assignment PDF</p>
+                    <p style="font-size:0.85rem; color:var(--slate); margin-top:0.5rem;">Maximum file size: 10MB</p>
+                    <input type="file" id="file-pdf" accept="application/pdf" style="display:none;">
+                  </div>
+                  <div class="file-preview" id="preview-pdf"></div>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="question-pdf-txt">Specify question details / page (Optional):</label>
+                  <input type="text" class="form-control" id="question-pdf-txt" placeholder="Solve Question 5 on Page 3.">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Resolve Question</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Quick Chips Helper -->
+        <div style="margin:2rem 0; text-align:center;">
+          <p style="margin-bottom:0.75rem; font-weight:600;">Not sure what to ask? Try these examples:</p>
+          <div style="display:flex; justify-content:center; gap:0.5rem; flex-wrap:wrap;">
+            <button class="chip" onclick="fillExampleText('Prove that the angle in a semicircle is a right angle.')">Semiconductor Right Angle Proof</button>
+            <button class="chip" onclick="fillExampleText('What are Kepler\'s laws of planetary motion?')">Kepler's Laws</button>
+            <button class="chip" onclick="fillExampleText('How does a semiconductor diode function in reverse bias?')">Diode Reverse Bias</button>
+          </div>
+        </div>
+
+        <!-- Answer Rendering Output -->
+        <div id="solution-output" style="margin-top:3rem;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="font-size:1.3rem;">Sankalp Pathshala</h4>
+        <p>Premium offline academy offering structured competitive exams and boards preparation with AI learning integration.</p>
+        <p style="font-size:0.8rem; color:var(--slate);">Designed & developed by NexGenAiTech (Jahid, +91 8055698328, https://nexgenaitech.online)</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="courses.html">Classroom Courses</a></li>
+          <li><a href="study-material.html">Study Material</a></li>
+          <li><a href="test-series.html">Mock Test Series</a></li>
+          <li><a href="ai-assistant.html">AI Assistant</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">About Institute</a></li>
+          <li><a href="faculty.html">Our Faculty</a></li>
+          <li><a href="gallery.html">Campus Gallery</a></li>
+          <li><a href="faq.html">FAQ Portal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Sankalp Digital Pathshala. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+  <script>
+    function fillExampleText(val) {
+      const activeTabBtn = document.querySelector('.tab-btn.active');
+      if (activeTabBtn.getAttribute('data-tab') === 'tab-text') {
+        const txt = document.getElementById('question-text');
+        if (txt) txt.value = val;
+      } else if (activeTabBtn.getAttribute('data-tab') === 'tab-image') {
+        const txt = document.getElementById('question-image-txt');
+        if (txt) txt.value = val;
+      } else {
+        const txt = document.getElementById('question-pdf-txt');
+        if (txt) txt.value = val;
+      }
+    }
+  </script>
+</body>
+</html>

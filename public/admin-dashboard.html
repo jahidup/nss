@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Sankalp Digital Pathshala</title>
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .admin-tab-panel {
+      display: none;
+    }
+    .admin-tab-panel.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Sankalp<span>Pathshala</span></a>
+      <button class="btn btn-outline" id="admin-logout-btn" style="padding:0.4rem 0.85rem; border-color:#dc2626; color:#dc2626;">Sign Out</button>
+    </div>
+  </header>
+
+  <!-- Sidebar Split Layout -->
+  <div class="admin-wrapper">
+    <aside class="sidebar">
+      <ul class="sidebar-menu">
+        <li><a href="#" class="sidebar-link active" data-panel="panel-dashboard">Dashboard Stats</a></li>
+        <li><a href="#" class="sidebar-link" data-panel="panel-leads">Leads CRM</a></li>
+        <li><a href="#" class="sidebar-link" data-panel="panel-inquiries">Inquiries CRM</a></li>
+        <li><a href="admin-results.html" class="sidebar-link">Results Manager</a></li>
+        <li><a href="#" class="sidebar-link" data-panel="panel-gallery">Gallery Manager</a></li>
+        <li><a href="#" class="sidebar-link" data-panel="panel-events">Events Manager</a></li>
+      </ul>
+    </aside>
+
+    <main class="admin-main">
+      
+      <!-- Panel 1: Stats -->
+      <div class="admin-tab-panel active" id="panel-dashboard">
+        <div class="admin-header-row">
+          <h2>Overview Analytics</h2>
+        </div>
+        <div class="grid-3" id="admin-stats-row">
+          <div class="card" style="text-align:center; padding:1.5rem;">
+            <h3>Active Leads</h3>
+            <div style="font-size:3rem; font-weight:800; color:var(--primary); margin:0.5rem 0;" id="stat-leads-val">0</div>
+            <p>Potential student enrollments</p>
+          </div>
+          <div class="card" style="text-align:center; padding:1.5rem;">
+            <h3>Inquiries</h3>
+            <div style="font-size:3rem; font-weight:800; color:var(--primary); margin:0.5rem 0;" id="stat-inquiries-val">0</div>
+            <p>General contact form inquiries</p>
+          </div>
+          <div class="card" style="text-align:center; padding:1.5rem;">
+            <h3>Results Published</h3>
+            <div style="font-size:3rem; font-weight:800; color:var(--primary); margin:0.5rem 0;" id="stat-results-val">0</div>
+            <p>Verified marksheets in database</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: Leads CRM -->
+      <div class="admin-tab-panel" id="panel-leads">
+        <div class="admin-header-row">
+          <h2>Admissions Leads (AI Scored)</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Student Name</th>
+                <th>Target Class</th>
+                <th>Phone Number</th>
+                <th>AI Score</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="leads-tbody">
+              <tr>
+                <td colspan="6" style="text-align:center;">Fetching student leads...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel 3: Inquiries CRM -->
+      <div class="admin-tab-panel" id="panel-inquiries">
+        <div class="admin-header-row">
+          <h2>Contact Inquiries Desk</h2>
+        </div>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Full Name</th>
+                <th>Phone</th>
+                <th>Subject</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="inquiries-tbody">
+              <tr>
+                <td colspan="5" style="text-align:center;">Fetching general inquiries...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel 4: Gallery Manager -->
+      <div class="admin-tab-panel" id="panel-gallery">
+        <div class="admin-header-row">
+          <h2>Gallery Asset Uploader</h2>
+        </div>
+        <div class="grid-2">
+          
+          <div class="card">
+            <h3>Upload New Photo</h3>
+            <form id="admin-gallery-form" style="margin-top:1.5rem;">
+              <div class="form-group">
+                <label class="form-label" for="gal-image">Choose Image File *</label>
+                <input type="file" class="form-control" id="gal-image" accept="image/*" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="gal-caption">Photo Caption *</label>
+                <input type="text" class="form-control" id="gal-caption" placeholder="e.g. Robotics Lab Sessions" required>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Upload to Gallery</button>
+            </form>
+          </div>
+
+          <div>
+            <h3>Current Gallery Stream</h3>
+            <div class="grid-2" id="admin-gallery-grid" style="margin-top:1.5rem; gap:1rem;"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Panel 5: Events Manager -->
+      <div class="admin-tab-panel" id="panel-events">
+        <div class="admin-header-row">
+          <h2>Institute Event Coordinator</h2>
+        </div>
+        <div class="grid-2">
+          
+          <div class="card">
+            <h3>Add New Campus Event</h3>
+            <form id="admin-event-form" style="margin-top:1.5rem;">
+              <div class="form-group">
+                <label class="form-label" for="ev-title">Event Title *</label>
+                <input type="text" class="form-control" id="ev-title" placeholder="e.g. STRE Scholarship Exams" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ev-desc">Event Description *</label>
+                <textarea class="form-control" id="ev-desc" placeholder="Details about registration, waiver and time rules." required></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ev-date">Scheduled Date *</label>
+                <input type="date" class="form-control" id="ev-date" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="ev-image">Event Banner Image (Optional)</label>
+                <input type="file" class="form-control" id="ev-image" accept="image/*">
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Add Event</button>
+            </form>
+          </div>
+
+          <div>
+            <h3>Upcoming Scheduled Events</h3>
+            <div id="admin-events-grid" style="display:grid; grid-template-columns:1fr; gap:1rem; margin-top:1.5rem;"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="/assets/app.js"></script>
+  <script>
+    // Local sidebar navigation toggle inside admin dashboard
+    const sideLinks = document.querySelectorAll('.sidebar-link[data-panel]');
+    const adminPanels = document.querySelectorAll('.admin-tab-panel');
+
+    sideLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        sideLinks.forEach(l => l.classList.remove('active'));
+        adminPanels.forEach(p => p.classList.remove('active'));
+
+        link.classList.add('active');
+        const target = link.getAttribute('data-panel');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
